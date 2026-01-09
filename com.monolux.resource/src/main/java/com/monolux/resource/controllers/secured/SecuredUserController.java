@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
 
 @Api(tags = "User API")
 @RestController
@@ -49,7 +50,7 @@ public class SecuredUserController extends BaseSecuredController {
     @ApiOperation(value = "Current User Info")
     @GetMapping(value = "/me")
     public ResponseEntity<ApiResponse> findMe(@RequestHeader final HttpHeaders reqHeaders,
-                                              @AuthenticationPrincipal final String userId) {
+                                              @ApiIgnore @AuthenticationPrincipal final String userId) {
         return this.userService.findUserById(userId)
                 .map(user -> ResponseEntity.ok(ApiResponse.createResponse(HttpStatus.OK, UserResInfo.builder()
                         .userId(user.getUserId())

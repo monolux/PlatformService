@@ -90,7 +90,7 @@ public class JdbcTokenStore extends org.springframework.security.oauth2.provider
         auth = super.readAuthentication(tokenValue);
 
         if (auth != null) {
-            redisTemplate.opsForValue().set(key, auth);
+            this.redisTemplate.opsForValue().set(key, auth);
         }
 
         return auth;
@@ -100,13 +100,13 @@ public class JdbcTokenStore extends org.springframework.security.oauth2.provider
     public void storeAccessToken(final OAuth2AccessToken token, final OAuth2Authentication authentication) {
         super.storeAccessToken(token, authentication);
         this.cacheAccessToken(token.getValue(), token);
-        redisTemplate.opsForValue().set(JdbcTokenStore.PREFIX_AUTH + token.getValue(), authentication);
+        this.redisTemplate.opsForValue().set(JdbcTokenStore.PREFIX_AUTH + token.getValue(), authentication);
     }
 
     @Override
     public void removeAccessToken(final String tokenValue) {
-        redisTemplate.delete(JdbcTokenStore.PREFIX_ACCESS + tokenValue);
-        redisTemplate.delete(JdbcTokenStore.PREFIX_AUTH + tokenValue);
+        this.redisTemplate.delete(JdbcTokenStore.PREFIX_ACCESS + tokenValue);
+        this.redisTemplate.delete(JdbcTokenStore.PREFIX_AUTH + tokenValue);
         super.removeAccessToken(tokenValue);
     }
 
@@ -117,14 +117,14 @@ public class JdbcTokenStore extends org.springframework.security.oauth2.provider
     private void cacheAccessToken(final String tokenValue, final OAuth2AccessToken token) {
         if (token.getExpiration() != null) {
             long ttl = token.getExpiration().getTime() - System.currentTimeMillis();
-            redisTemplate.opsForValue().set(
-                    PREFIX_ACCESS + tokenValue,
+            this.redisTemplate.opsForValue().set(
+                    JdbcTokenStore.PREFIX_ACCESS + tokenValue,
                     token,
                     ttl,
                     TimeUnit.MILLISECONDS
             );
         } else {
-            redisTemplate.opsForValue().set(PREFIX_ACCESS + tokenValue, token);
+            this.redisTemplate.opsForValue().set(JdbcTokenStore.PREFIX_ACCESS + tokenValue, token);
         }
     }
 
