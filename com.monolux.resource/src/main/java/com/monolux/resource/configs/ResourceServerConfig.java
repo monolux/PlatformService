@@ -107,6 +107,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .permitAll()
 
                 // Secured User API (Apply Authority)
+                // TODO : 현재는 일반 유저 밖에 없기 때문에 권한 심플, 추후 권한이 추가되면 작업 예정
                 .antMatchers(securedUserApiUrls)
                 .hasAnyAuthority(Arrays.stream(Authorities.values())
                         .filter(authorities -> authorities.getAuthorityType().equals(AuthorityType.USER))

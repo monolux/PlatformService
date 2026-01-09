@@ -87,6 +87,14 @@ spring:
         - utils.prod
     active: local
 
+  session:
+    store-type: redis
+
+  redis:
+    host: localhost
+    port: 6379
+    ssl: false
+
 logging.config: classpath:log4j2/log4j2.xml
 
 --- # authorization.local
@@ -96,7 +104,7 @@ spring.datasource.hikari.authorization:
   driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jdbc-url: jdbc:sqlserver://localhost:1433;databaseName=security;encrypt=true;trustServerCertificate=true;serverTimezone=Asia/Seoul
   username: sa
-  password: P@$$w0rd1!
+  password: ${DB_PASSWORD:P@$$w0rd1!}
   poolName: AuthHikariCP
   maximumPoolSize: 64
   minimumIdle: 64
@@ -117,7 +125,7 @@ spring.datasource.hikari.authorization:
   driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jdbc-url: jdbc:sqlserver://localhost:1433;databaseName=security;encrypt=true;trustServerCertificate=true;serverTimezone=Asia/Seoul
   username: sa
-  password: P@$$w0rd1!
+  password: ${DB_PASSWORD:P@$$w0rd1!}
   poolName: AuthHikariCP
   maximumPoolSize: 64
   minimumIdle: 64
@@ -138,7 +146,7 @@ spring.datasource.hikari.authorization:
   driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jdbc-url: jdbc:sqlserver://localhost:1433;databaseName=security;encrypt=true;trustServerCertificate=true;serverTimezone=Asia/Seoul
   username: sa
-  password: P@$$w0rd1!
+  password: ${DB_PASSWORD:P@$$w0rd1!}
   poolName: AuthHikariCP
   maximumPoolSize: 64
   minimumIdle: 64

@@ -89,7 +89,7 @@ spring.config.activate.on-profile: resource.local
 spring.security.oauth2:
   client:
     client-id: platform-service-client
-    client-secret: P@$$w0rd1!
+    client-secret: ${CLIENT_SECRET:P@$$w0rd1!}
   resource:
     token-uri: http://localhost:9000/oauth/token
     token-info-uri: http://localhost:9000/oauth/check_token
@@ -107,7 +107,7 @@ spring.config.activate.on-profile: resource.dev
 spring.security.oauth2:
   client:
     client-id: platform-service-client
-    client-secret: P@$$w0rd1!
+    client-secret: ${CLIENT_SECRET:P@$$w0rd1!}
   resource:
     token-uri: http://localhost:9000/oauth/token
     token-info-uri: http://10.110.10.214:9000/oauth/check_token
@@ -125,7 +125,7 @@ spring.config.activate.on-profile: resource.prod
 spring.security.oauth2:
   client:
     client-id: platform-service-client
-    client-secret: P@$$w0rd1!
+    client-secret: ${CLIENT_SECRET:P@$$w0rd1!}
   resource:
     token-uri: http://localhost:9000/oauth/token
     token-info-uri: http://localhost:9000/oauth/check_token

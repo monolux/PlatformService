@@ -18,6 +18,10 @@ dependencies {
 
     implementation "org.springframework.boot:spring-boot-starter-actuator"
     implementation "org.springframework.boot:spring-boot-starter-thymeleaf"
+
+    implementation "org.springframework.boot:spring-boot-starter-data-redis"
+    implementation "org.springframework.session:spring-session-data-redis"
+
     implementation "org.springframework.security.oauth:spring-security-oauth2:${versions.springSecurityOauth2Version}"
     implementation "org.glassfish.jaxb:jaxb-runtime:${versions.jaxbRuntimeVersion}"
 

@@ -194,7 +194,12 @@ public class User extends BaseEntity {
                 .isEmpty();
     }
 
+    /**
+     * Get User Authorities
+     * @return : Authorities
+     */
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        // TODO : 추후에 Authority 가 추가 되면 이 곳에 작성. 현재는 일반 유저 밖에 없는 상황.
         return Arrays.stream(Authorities.values())
                 .filter(authorities -> authorities.getAuthorityType().equals(AuthorityType.USER))
                 .map(authorities -> new SimpleGrantedAuthority(authorities.getCode())).toList();

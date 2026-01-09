@@ -28,6 +28,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .authorizeRequests()
 
                 // Secured OTP API (Apply Authority)
+                // TODO : 일반 유저 이외의 타입이 생긴다면 권한 조정 필요.
                 .antMatchers(securedOtpApiUrls)
                 .hasAnyAuthority(Arrays.stream(Authorities.values())
                         .filter(authorities -> authorities.getAuthorityType().equals(AuthorityType.USER))

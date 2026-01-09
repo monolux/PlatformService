@@ -5,14 +5,22 @@ import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.oauth2.common.OAuth2AccessToken;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Service;
 
 import javax.sql.DataSource;
+import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @Service(JdbcTokenStore.BEAN_NAME_JDBC_TOKEN_STORE)
 public class JdbcTokenStore extends org.springframework.security.oauth2.provider.token.store.JdbcTokenStore {
     // region ▒▒▒▒▒ Constants ▒▒▒▒▒
+
+    private static final String PREFIX_ACCESS = "oauth:access:";
+
+    private static final String PREFIX_AUTH = "oauth:auth:";
 
     public final static String BEAN_NAME_JDBC_TOKEN_STORE = "jdbcTokenStoreCustom";
 
@@ -30,12 +38,94 @@ public class JdbcTokenStore extends org.springframework.security.oauth2.provider
 
     // endregion
 
+    // region ▒▒▒▒▒ Member Variables ▒▒▒▒▒
+
+    private final RedisTemplate<String, Object> redisTemplate;
+
+    // endregion
+
     // region ▒▒▒▒▒ Constructors ▒▒▒▒▒
 
     @Autowired
-    public JdbcTokenStore(@Qualifier(DataSourceConfig.BEAN_NAME_DATASOURCE_AUTHORIZATION) final DataSource dataSource) {
+    public JdbcTokenStore(@Qualifier(DataSourceConfig.BEAN_NAME_DATASOURCE_AUTHORIZATION) final DataSource dataSource,
+                          final RedisTemplate<String, Object> redisTemplate) {
         super(dataSource);
+        this.redisTemplate = redisTemplate;
         this.applyInsertAccessTokenSql(dataSource);
+    }
+
+    // endregion
+
+    // region ▒▒▒▒▒ Override Methods ▒▒▒▒▒
+
+    @Override
+    public OAuth2AccessToken readAccessToken(final String tokenValue) {
+        String key = JdbcTokenStore.PREFIX_ACCESS + tokenValue;
+
+        OAuth2AccessToken token = (OAuth2AccessToken) this.redisTemplate.opsForValue().get(key);
+
+        if (token != null) {
+            return token;
+        }
+
+        token = super.readAccessToken(tokenValue);
+
+        if (token != null) {
+            this.cacheAccessToken(tokenValue, token);
+        }
+
+        return token;
+    }
+
+    @Override
+    public OAuth2Authentication readAuthentication(final String tokenValue) {
+        String key = JdbcTokenStore.PREFIX_AUTH + tokenValue;
+
+        OAuth2Authentication auth = (OAuth2Authentication) this.redisTemplate.opsForValue().get(key);
+
+        if (auth != null) {
+            return auth;
+        }
+
+        auth = super.readAuthentication(tokenValue);
+
+        if (auth != null) {
+            redisTemplate.opsForValue().set(key, auth);
+        }
+
+        return auth;
+    }
+
+    @Override
+    public void storeAccessToken(final OAuth2AccessToken token, final OAuth2Authentication authentication) {
+        super.storeAccessToken(token, authentication);
+        this.cacheAccessToken(token.getValue(), token);
+        redisTemplate.opsForValue().set(JdbcTokenStore.PREFIX_AUTH + token.getValue(), authentication);
+    }
+
+    @Override
+    public void removeAccessToken(final String tokenValue) {
+        redisTemplate.delete(JdbcTokenStore.PREFIX_ACCESS + tokenValue);
+        redisTemplate.delete(JdbcTokenStore.PREFIX_AUTH + tokenValue);
+        super.removeAccessToken(tokenValue);
+    }
+
+    // endregion
+
+    // region ▒▒▒▒▒ User Defined Methods ▒▒▒▒▒
+
+    private void cacheAccessToken(final String tokenValue, final OAuth2AccessToken token) {
+        if (token.getExpiration() != null) {
+            long ttl = token.getExpiration().getTime() - System.currentTimeMillis();
+            redisTemplate.opsForValue().set(
+                    PREFIX_ACCESS + tokenValue,
+                    token,
+                    ttl,
+                    TimeUnit.MILLISECONDS
+            );
+        } else {
+            redisTemplate.opsForValue().set(PREFIX_ACCESS + tokenValue, token);
+        }
     }
 
     // endregion
