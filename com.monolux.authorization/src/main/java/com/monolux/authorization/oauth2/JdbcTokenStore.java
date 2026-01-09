@@ -117,12 +117,9 @@ public class JdbcTokenStore extends org.springframework.security.oauth2.provider
     private void cacheAccessToken(final String tokenValue, final OAuth2AccessToken token) {
         if (token.getExpiration() != null) {
             long ttl = token.getExpiration().getTime() - System.currentTimeMillis();
-            this.redisTemplate.opsForValue().set(
-                    JdbcTokenStore.PREFIX_ACCESS + tokenValue,
-                    token,
-                    ttl,
-                    TimeUnit.MILLISECONDS
-            );
+            if (ttl > 0) {
+                this.redisTemplate.opsForValue().set(JdbcTokenStore.PREFIX_ACCESS + tokenValue, token, ttl, TimeUnit.MILLISECONDS);
+            }
         } else {
             this.redisTemplate.opsForValue().set(JdbcTokenStore.PREFIX_ACCESS + tokenValue, token);
         }
