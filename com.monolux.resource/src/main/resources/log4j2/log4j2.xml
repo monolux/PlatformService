@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="CONSOLE_LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} %5level %pid --- [%thread] [%logger] : %msg%n</Property>
+        <Property name="FILE_LOG_PATTERN">%d{yyyy-MM-dd_HH:mm:ss.SSS} %5level %pid --- [%thread] [%logger:%line] : %msg%n</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- 콘솔에 로그를 출력하는 Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${sys:CONSOLE_LOG_PATTERN}" />
+        </Console>
+
+        <!-- 파일에 로그를 기록하고 롤링 설정을 적용하는 File Appender -->
+        <RollingFile name="RollingFile" fileName="logs/resource.log" filePattern="logs/resource.%d{yyyyMMdd}.log">
+            <PatternLayout pattern="${sys:FILE_LOG_PATTERN}" />
+            <Policies>
+                <!-- 하루마다(filePattern = %d{yyyyMMdd}, interval = 1 이므로...) 롤링을 수행하는 설정 -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- 루트 로거 설정 -->
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="RollingFile" />
+        </Root>
+    </Loggers>
+</Configuration>

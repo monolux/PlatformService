@@ -1,0 +1,12 @@
+{
+  "properties":[
+    {
+      "name": "encryption.aes_key",
+      "type": "com.zaxxer.hikari.HikariConfig"
+    },
+    {
+      "name": "encryption.des_key",
+      "type": "java.lang.String"
+    }
+  ]
+}

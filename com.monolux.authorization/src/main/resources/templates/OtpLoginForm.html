@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Papaya Play Sign In</title>
+    <link rel="stylesheet" type="text/css" href="/css/signin.css" crossorigin="anonymous"/>
+</head>
+<body>
+<form id="form-otp-signin" method="post" th:action="${otpLoginProcessingUrl}">
+    <h2>Monolux</h2>
+    <h2>Please OTP Sign In</h2>
+    <input type="hidden" th:id="${otpIdElementId}" th:name="${otpIdElementId}" th:value="${otpId}"/>
+    <p>
+        <label th:for="${otpPasswordElementId}">
+            password<input type="text" th:id="${otpPasswordElementId}" th:name="${otpPasswordElementId}" autofocus style="">
+        </label>
+    </p>
+    <button type="submit">Sign in</button>
+</form>
+</body>
+</html>

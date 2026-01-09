@@ -1,0 +1,17 @@
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+description = "Monolux Platform Encryption"
+
+dependencies {
+
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,52 @@
+{
+  "properties":[
+    {
+      "name": "spring.datasource.hikari.domain",
+      "type": "com.zaxxer.hikari.HikariConfig"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.driver-class-name",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.jdbc-url",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.username",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.password",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.poolName",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.maximumPoolSize",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.minimumIdle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.read-only",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.auto-commit",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.transaction-isolation",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.domain.connection-test-query",
+      "type": "java.lang.String"
+    }
+  ]
+}

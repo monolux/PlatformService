@@ -1,0 +1,8 @@
+rootProject.name = 'PlatformService'
+include 'com.monolux.authorization'
+include 'com.monolux.utils'
+include 'com.monolux.domain'
+include 'com.monolux.resource'
+include 'com.monolux.encryption'
+include 'com.monolux.common'
+

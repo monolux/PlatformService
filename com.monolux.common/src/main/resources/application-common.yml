@@ -1,0 +1,8 @@
+--- # utils.local
+spring.config.activate.on-profile: common.local
+
+--- # utils.dev
+spring.config.activate.on-profile: common.dev
+
+--- # utils.prod
+spring.config.activate.on-profile: common.prod

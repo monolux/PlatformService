@@ -1,0 +1,17 @@
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+description = "Monolux Platform Common"
+
+dependencies {
+    implementation "org.springframework.security.oauth:spring-security-oauth2:${versions.springSecurityOauth2Version}"
+}
+
+test {
+    useJUnitPlatform()
+}

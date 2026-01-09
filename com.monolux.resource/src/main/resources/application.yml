@@ -1,0 +1,138 @@
+app:
+  locale:
+    language: "ko"
+    country: "KR"
+
+server:
+  #tomcat.mbeanregistry.enabled: true #/actuator/metrics/tomcat.threads.config.max, /actuator/metrics/tomcat.threads.busy
+  port: 8080
+  servlet:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+      #force-request: true
+      #force-response: true
+  shutdown: graceful
+  forward-headers-strategy: framework
+
+management:
+  server.port: 8081
+  endpoints:
+    enabled-by-default: false
+    web.base-path: /monolux/actuator
+    jmx.exposure.exclude: "*"
+    web.exposure.include:
+      - info
+      - health
+      - metrics
+      - prometheus
+  endpoint:
+    info.enabled: true
+    health.enabled: true
+    health.show-details: always
+    metrics.enabled: true
+    prometheus.enabled: true
+    shutdown.enabled: false
+  info:
+    defaults.enabled: false
+    build.enabled: true
+    env.enabled: false
+    git.enabled: false
+    git.mode: simple
+    java.enabled: true
+  metrics:
+    tags:
+      application: resource-server-monitoring
+
+spring:
+  application:
+    name: "monolux-resource-server"
+  banner:
+    location: banner.txt
+    charset: UTF-8
+  main.banner-mode: log
+  profiles:
+    include:
+      - common
+      - domain
+      - encryption
+      - utils
+    group:
+      local:
+        - common.local
+        - domain.local
+        - encryption.local
+        - resource.local
+        - utils.local
+      dev:
+        - common.dev
+        - domain.dev
+        - encryption.dev
+        - resource.dev
+        - utils.dev
+      prod:
+        - common.prod
+        - domain.prod
+        - encryption.prod
+        - resource.prod
+        - utils.prod
+    active: local
+
+logging.config: classpath:log4j2/log4j2.xml
+
+spring.mvc.pathmatch.matching-strategy: ant_path_matcher
+
+--- # resource.local
+spring.config.activate.on-profile: resource.local
+
+spring.security.oauth2:
+  client:
+    client-id: platform-service-client
+    client-secret: P@$$w0rd1!
+  resource:
+    token-uri: http://localhost:9000/oauth/token
+    token-info-uri: http://localhost:9000/oauth/check_token
+
+springfox.documentation.enabled: true
+
+logging.level.org.springframework:
+  web: info
+  security: info
+  oauth2: info
+
+--- # resource.dev
+spring.config.activate.on-profile: resource.dev
+
+spring.security.oauth2:
+  client:
+    client-id: platform-service-client
+    client-secret: P@$$w0rd1!
+  resource:
+    token-uri: http://localhost:9000/oauth/token
+    token-info-uri: http://10.110.10.214:9000/oauth/check_token
+
+springfox.documentation.enabled: true
+
+logging.level.org.springframework:
+  web: info
+  security: info
+  oauth2: info
+
+--- # resource.prod
+spring.config.activate.on-profile: resource.prod
+
+spring.security.oauth2:
+  client:
+    client-id: platform-service-client
+    client-secret: P@$$w0rd1!
+  resource:
+    token-uri: http://localhost:9000/oauth/token
+    token-info-uri: http://localhost:9000/oauth/check_token
+
+springfox.documentation.enabled: false
+
+logging.level.org.springframework:
+  web: warn
+  security: warn
+  oauth2: warn

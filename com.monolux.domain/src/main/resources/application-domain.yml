@@ -1,0 +1,90 @@
+spring:
+  sql:
+    init:
+      platform: all
+      mode: never
+      encoding: utf-8
+      continue-on-error: false
+
+  jpa:
+    database: sql_server
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    open-in-view: false
+    defer-datasource-initialization: true
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      # Options not supported by 'Hibernate Property Class' are listed below...
+      hibernate.format_sql: true
+
+--- # domain.local
+spring.config.activate.on-profile: domain.local
+
+spring.datasource.hikari:
+  domain:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    jdbc-url: jdbc:sqlserver://localhost:1433;databaseName=platform_service;encrypt=true;trustServerCertificate=true;serverTimezone=Asia/Seoul
+    username: sa
+    password: P@$$w0rd1!
+    poolName: DomainHikariCP
+    maximumPoolSize: 64
+    minimumIdle: 64
+    read-only: false
+    auto-commit: true
+    transaction-isolation: TRANSACTION_READ_COMMITTED
+    connection-test-query: "SELECT 1"
+
+spring.jpa.show-sql: true
+
+logging.level.org.hibernate:
+  sql: debug
+  type.descriptor.sql: trace
+
+--- # domain.dev
+spring.config.activate.on-profile: domain.dev
+
+spring.datasource.hikari:
+  domain:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    jdbc-url: jdbc:sqlserver://localhost:1433;databaseName=platform_service;encrypt=true;trustServerCertificate=true;serverTimezone=Asia/Seoul
+    username: sa
+    password: P@$$w0rd1!
+    poolName: DomainHikariCP
+    maximumPoolSize: 64
+    minimumIdle: 64
+    read-only: false
+    auto-commit: true
+    transaction-isolation: TRANSACTION_READ_COMMITTED
+    connection-test-query: "SELECT 1"
+
+spring.jpa.show-sql: true
+
+logging.level.org.hibernate:
+  sql: debug
+  type.descriptor.sql: trace
+
+--- # domain.prod
+spring.config.activate.on-profile: domain.prod
+spring.datasource.hikari:
+  domain:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    jdbc-url: jdbc:sqlserver://localhost:1433;databaseName=platform_service;encrypt=true;trustServerCertificate=true;serverTimezone=Asia/Seoul
+    username: sa
+    password: P@$$w0rd1!
+    poolName: DomainHikariCP
+    maximumPoolSize: 64
+    minimumIdle: 64
+    read-only: false
+    auto-commit: true
+    transaction-isolation: TRANSACTION_READ_COMMITTED
+    connection-test-query: "SELECT 1"
+
+spring.jpa.show-sql: false
+
+logging.level.org.hibernate:
+  sql: warn
+  type.descriptor.sql: warn

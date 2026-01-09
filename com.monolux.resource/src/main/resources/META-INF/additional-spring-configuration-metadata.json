@@ -1,0 +1,28 @@
+{
+  "properties":[
+    {
+      "name": "app.locale.language",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "app.locale.country",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.security.oauth2.client.client-id",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.security.oauth2.client.client-secret",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.security.oauth2.resource.token-uri",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.security.oauth2.resource.token-info-uri",
+      "type": "java.lang.String"
+    }
+  ]
+}

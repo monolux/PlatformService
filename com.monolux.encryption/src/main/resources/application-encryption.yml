@@ -1,0 +1,20 @@
+--- # encryption.local
+spring.config.activate.on-profile: encryption.local
+
+encryption:
+  aes_key: ${AES_ENCRYPTION_KEY:X&J)I@BcRfUjQnZr3u7x!A%D*G-KaYdA}
+  des_key: ${DES_ENCRYPTION_KEY:D&VpcRT+}
+
+--- # encryption.dev
+spring.config.activate.on-profile: encryption.dev
+
+encryption:
+  aes_key: ${AES_ENCRYPTION_KEY:Dr&1-i2Gq&5LFT*P@*9G#gaV#r@w#?(Z}
+  des_key: ${DES_ENCRYPTION_KEY:0e2gT@id}
+
+--- # encryption.prod
+spring.config.activate.on-profile: encryption.prod
+
+encryption:
+  aes_key: ${AES_ENCRYPTION_KEY:0Z@zZsVs3vJxNEPhWThezAvpIOxnt8Z#}
+  des_key: ${DES_ENCRYPTION_KEY:ZCMu[eWf}

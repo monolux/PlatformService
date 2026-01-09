@@ -1,0 +1,25 @@
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+description = "Monolux Platform Utilities"
+
+dependencies {
+    annotationProcessor "javax.persistence:javax.persistence-api"
+    testAnnotationProcessor "javax.persistence:javax.persistence-api"
+
+    implementation "com.amazonaws:aws-java-sdk-s3:${versions.awsJavaSdkS3Version}"
+    implementation "de.taimos:totp:${versions.totpVersion}"
+    implementation "com.google.zxing:core:${versions.zxingVersion}"
+    implementation "com.google.zxing:javase:${versions.zxingVersion}"
+
+
+}
+
+test {
+    useJUnitPlatform()
+}

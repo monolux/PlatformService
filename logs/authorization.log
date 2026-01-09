@@ -1,0 +1,486 @@
+2024-09-23_13:25:53.995  INFO 32676 --- [restartedMain] [org.springframework.boot.SpringApplication:62] : 
+
+      ___           ___           ___           ___           ___       ___           ___
+     /\__\         /\  \         /\__\         /\  \         /\__\     /\__\         |\__\
+    /::|  |       /::\  \       /::|  |       /::\  \       /:/  /    /:/  /         |:|  |
+   /:|:|  |      /:/\:\  \     /:|:|  |      /:/\:\  \     /:/  /    /:/  /          |:|  |
+  /:/|:|__|__   /:/  \:\  \   /:/|:|  |__   /:/  \:\  \   /:/  /    /:/  /  ___      |:|__|__
+ /:/ |::::\__\ /:/__/ \:\__\ /:/ |:| /\__\ /:/__/ \:\__\ /:/__/    /:/__/  /\__\ ____/::::\__\
+ \/__/~~/:/  / \:\  \ /:/  / \/__|:|/:/  / \:\  \ /:/  / \:\  \    \:\  \ /:/  / \::::/~~/~
+       /:/  /   \:\  /:/  /      |:/:/  /   \:\  /:/  /   \:\  \    \:\  /:/  /   ~~|:|~~|
+      /:/  /     \:\/:/  /       |::/  /     \:\/:/  /     \:\  \    \:\/:/  /      |:|  |
+     /:/  /       \::/  /        /:/  /       \::/  /       \:\__\    \::/  /       |:|  |
+     \/__/         \/__/         \/__/         \/__/         \/__/     \/__/         \|__|
+::   - Powered by Spring Boot 2.6.14 ::
+
+2024-09-23_13:25:54.004  INFO 32676 --- [background-preinit] [org.hibernate.validator.internal.util.Version:21] : HV000001: Hibernate Validator 6.2.5.Final
+2024-09-23_13:25:54.120  INFO 32676 --- [restartedMain] [com.monolux.authorization.AuthorizationServerApplication:55] : Starting AuthorizationServerApplication using Java 17.0.5 on JICHO with PID 32676 (C:\Development\Practice\PlatformService\com.monolux.authorization\build\classes\java\main started by JeongIk in C:\Development\Practice\PlatformService)
+2024-09-23_13:25:54.124  INFO 32676 --- [restartedMain] [com.monolux.authorization.AuthorizationServerApplication:651] : The following 10 profiles are active: "common", "domain", "encryption", "utils", "local", "authorization.local", "common.local", "domain.local", "encryption.local", "utils.local"
+2024-09-23_13:25:54.196  INFO 32676 --- [restartedMain] [org.springframework.boot.devtools.restart.ChangeableUrls:255] : The Class-Path manifest attribute in C:\Users\JeongIk\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.2\5528bc882ea499a09d720b42af11785c4fc6be2a\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/txw2-2.3.2.jar,file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/istack-commons-runtime-3.0.8.jar,file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/stax-ex-1.8.1.jar,file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/FastInfoset-1.2.16.jar,file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/jakarta.activation-api-1.2.1.jar
+2024-09-23_13:25:54.197  INFO 32676 --- [restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-23_13:25:54.197  INFO 32676 --- [restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-23_13:25:55.641  INFO 32676 --- [restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-23_13:25:55.784  INFO 32676 --- [restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] : Finished Spring Data repository scanning in 130 ms. Found 6 JPA repository interfaces.
+2024-09-23_13:25:57.258  INFO 32676 --- [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] : Tomcat initialized with port(s): 9000 (http)
+2024-09-23_13:25:57.273  INFO 32676 --- [restartedMain] [org.apache.coyote.http11.Http11NioProtocol:173] : Initializing ProtocolHandler ["http-nio-9000"]
+2024-09-23_13:25:57.274  INFO 32676 --- [restartedMain] [org.apache.catalina.core.StandardService:173] : Starting service [Tomcat]
+2024-09-23_13:25:57.274  INFO 32676 --- [restartedMain] [org.apache.catalina.core.StandardEngine:173] : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-09-23_13:25:57.386  INFO 32676 --- [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] : Initializing Spring embedded WebApplicationContext
+2024-09-23_13:25:57.386  INFO 32676 --- [restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] : Root WebApplicationContext: initialization completed in 3188 ms
+2024-09-23_13:25:57.741  INFO 32676 --- [restartedMain] [com.zaxxer.hikari.HikariDataSource:80] : DomainHikariCP - Starting...
+2024-09-23_13:25:58.048  INFO 32676 --- [restartedMain] [com.zaxxer.hikari.HikariDataSource:82] : DomainHikariCP - Start completed.
+2024-09-23_13:25:58.150  INFO 32676 --- [restartedMain] [org.hibernate.jpa.internal.util.LogHelper:31] : HHH000204: Processing PersistenceUnitInfo [name: dataSourceJpa]
+2024-09-23_13:25:58.331  INFO 32676 --- [restartedMain] [org.hibernate.Version:44] : HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-09-23_13:25:58.779  INFO 32676 --- [restartedMain] [org.hibernate.annotations.common.Version:56] : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-09-23_13:25:59.124  INFO 32676 --- [restartedMain] [org.hibernate.dialect.Dialect:175] : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-09-23_13:26:00.928  INFO 32676 --- [restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-09-23_13:26:00.944  INFO 32676 --- [restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] : Initialized JPA EntityManagerFactory for persistence unit 'dataSourceJpa'
+2024-09-23_13:26:01.644  INFO 32676 --- [restartedMain] [com.zaxxer.hikari.HikariDataSource:80] : AuthHikariCP - Starting...
+2024-09-23_13:26:01.667  INFO 32676 --- [restartedMain] [com.zaxxer.hikari.HikariDataSource:82] : AuthHikariCP - Start completed.
+2024-09-23_13:26:03.184  INFO 32676 --- [restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain:55] : Will secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c58abc7, org.springframework.security.web.context.SecurityContextPersistenceFilter@438faa55, org.springframework.security.web.header.HeaderWriterFilter@79cafc48, org.springframework.security.web.authentication.logout.LogoutFilter@4cb0401a, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@31d2f5f5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5f149f97, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17d483ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2aa82d47, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d4f7b98, org.springframework.security.web.session.SessionManagementFilter@552d1296, org.springframework.security.web.access.ExceptionTranslationFilter@1368addc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8b8b013]
+2024-09-23_13:26:03.205  INFO 32676 --- [restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain:55] : Will secure Or [Ant [pattern='/api/v1/secured/**']] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b90ba06, org.springframework.security.web.context.SecurityContextPersistenceFilter@42e077a6, org.springframework.security.web.header.HeaderWriterFilter@79f240a6, org.springframework.security.web.authentication.logout.LogoutFilter@1fe1d50a, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@2c347aea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61472496, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a5bbf68, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30e04d99, org.springframework.security.web.session.SessionManagementFilter@47f2700f, org.springframework.security.web.access.ExceptionTranslationFilter@6d39d7a3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2821c2a5]
+2024-09-23_13:26:03.211  INFO 32676 --- [restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain:55] : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17431080, org.springframework.security.web.context.SecurityContextPersistenceFilter@586a5984, org.springframework.security.web.header.HeaderWriterFilter@6bf4f187, org.springframework.security.web.authentication.logout.LogoutFilter@42f38a02, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6fb7d587, com.monolux.authorization.filters.PostUsernamePasswordAuthenticationFilter@22746f07, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@53f0348d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10f7b5e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c4306b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f7bd73c, org.springframework.security.web.session.SessionManagementFilter@1380e105, org.springframework.security.web.access.ExceptionTranslationFilter@7787ea5b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a685d01]
+2024-09-23_13:26:03.904  INFO 32676 --- [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:59] : LiveReload server is running on port 35729
+2024-09-23_13:26:03.934  INFO 32676 --- [restartedMain] [org.apache.coyote.http11.Http11NioProtocol:173] : Starting ProtocolHandler ["http-nio-9000"]
+2024-09-23_13:26:03.961  INFO 32676 --- [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] : Tomcat started on port(s): 9000 (http) with context path ''
+2024-09-23_13:26:04.103  INFO 32676 --- [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] : Tomcat initialized with port(s): 9001 (http)
+2024-09-23_13:26:04.104  INFO 32676 --- [restartedMain] [org.apache.coyote.http11.Http11NioProtocol:173] : Initializing ProtocolHandler ["http-nio-9001"]
+2024-09-23_13:26:04.105  INFO 32676 --- [restartedMain] [org.apache.catalina.core.StandardService:173] : Starting service [Tomcat]
+2024-09-23_13:26:04.105  INFO 32676 --- [restartedMain] [org.apache.catalina.core.StandardEngine:173] : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-09-23_13:26:04.135  INFO 32676 --- [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/]:173] : Initializing Spring embedded WebApplicationContext
+2024-09-23_13:26:04.136  INFO 32676 --- [restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] : Root WebApplicationContext: initialization completed in 167 ms
+2024-09-23_13:26:04.148  INFO 32676 --- [restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:58] : Exposing 4 endpoint(s) beneath base path '/monolux/actuator'
+2024-09-23_13:26:04.208  INFO 32676 --- [restartedMain] [org.apache.coyote.http11.Http11NioProtocol:173] : Starting ProtocolHandler ["http-nio-9001"]
+2024-09-23_13:26:04.218  INFO 32676 --- [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] : Tomcat started on port(s): 9001 (http) with context path ''
+2024-09-23_13:26:04.235  INFO 32676 --- [restartedMain] [com.monolux.authorization.AuthorizationServerApplication:61] : Started AuthorizationServerApplication in 11.111 seconds (JVM running for 14.217)
+2024-09-23_13:26:46.548  INFO 32676 --- [http-nio-9000-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-23_13:26:46.548  INFO 32676 --- [http-nio-9000-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] : Initializing Servlet 'dispatcherServlet'
+2024-09-23_13:26:46.550  INFO 32676 --- [http-nio-9000-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] : Completed initialization in 2 ms
+2024-09-23_13:26:47.658  WARN 32676 --- [http-nio-9000-exec-1] [org.apache.catalina.util.SessionIdGeneratorBase:173] : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [916] milliseconds.
+2024-09-23_13:27:02.047 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [VARCHAR] - [admin]
+2024-09-23_13:27:02.064 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created2_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:27:02.064 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created_3_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:27:02.065 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified4_5_0_] : [TIMESTAMP]) - [2024-09-20T20:28:42.483]
+2024-09-23_13:27:02.065 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified5_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:27:02.066 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([day_of_b6_5_0_] : [SMALLINT]) - [11]
+2024-09-23_13:27:02.066 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([month_of7_5_0_] : [SMALLINT]) - [5]
+2024-09-23_13:27:02.067 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([year_of_8_5_0_] : [INTEGER]) - [1982]
+2024-09-23_13:27:02.067 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted9_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:27:02.067 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted10_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.067 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([gender11_5_0_] : [VARCHAR]) - [Male]
+2024-09-23_13:27:02.068 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([is_fore12_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:27:02.068 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked13_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:27:02.068 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked_14_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.068 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail15_5_0_] : [VARCHAR]) - [freecji@google.com]
+2024-09-23_13:27:02.069 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail_ve16_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:27:02.069 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mobile_17_5_0_] : [VARCHAR]) - [010-6415-4694]
+2024-09-23_13:27:02.069 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([otp_sec18_5_0_] : [VARCHAR]) - [itzf5x4wyasqxcwnmiyktz6qlfbpinpa]
+2024-09-23_13:27:02.069 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([otp_sec19_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.069 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in20_5_0_] : [INTEGER]) - [17]
+2024-09-23_13:27:02.070 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in21_5_0_] : [TIMESTAMP]) - [2024-09-20T20:09:18.363]
+2024-09-23_13:27:02.070 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up22_5_0_] : [VARCHAR]) - [127.0.0.1]
+2024-09-23_13:27:02.071 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up23_5_0_] : [BIGINT]) - [2130706433]
+2024-09-23_13:27:02.072 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_na24_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:27:02.072 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_ni25_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:27:02.072 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([user_pr26_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.072 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw27_5_0_] : [VARCHAR]) - [{bcrypt}$2a$10$RTc1xLO2BXH72/QzpiMhouv1SCT9rqBgKwQztPI/dh8ENw6A/NJcO]
+2024-09-23_13:27:02.072 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw28_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:27:02.073 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([using_o29_5_0_] : [BOOLEAN]) - [true]
+2024-09-23_13:27:02.200 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [VARCHAR] - [admin]
+2024-09-23_13:27:02.202 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created2_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:27:02.202 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created_3_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:27:02.203 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified4_5_0_] : [TIMESTAMP]) - [2024-09-20T20:28:42.483]
+2024-09-23_13:27:02.203 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified5_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:27:02.203 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([day_of_b6_5_0_] : [SMALLINT]) - [11]
+2024-09-23_13:27:02.203 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([month_of7_5_0_] : [SMALLINT]) - [5]
+2024-09-23_13:27:02.203 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([year_of_8_5_0_] : [INTEGER]) - [1982]
+2024-09-23_13:27:02.203 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted9_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:27:02.204 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted10_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.204 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([gender11_5_0_] : [VARCHAR]) - [Male]
+2024-09-23_13:27:02.204 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([is_fore12_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:27:02.205 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked13_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:27:02.205 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked_14_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.205 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail15_5_0_] : [VARCHAR]) - [freecji@google.com]
+2024-09-23_13:27:02.205 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail_ve16_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:27:02.205 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mobile_17_5_0_] : [VARCHAR]) - [010-6415-4694]
+2024-09-23_13:27:02.205 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([otp_sec18_5_0_] : [VARCHAR]) - [itzf5x4wyasqxcwnmiyktz6qlfbpinpa]
+2024-09-23_13:27:02.205 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([otp_sec19_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.205 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in20_5_0_] : [INTEGER]) - [17]
+2024-09-23_13:27:02.205 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in21_5_0_] : [TIMESTAMP]) - [2024-09-20T20:09:18.363]
+2024-09-23_13:27:02.206 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up22_5_0_] : [VARCHAR]) - [127.0.0.1]
+2024-09-23_13:27:02.206 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up23_5_0_] : [BIGINT]) - [2130706433]
+2024-09-23_13:27:02.206 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_na24_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:27:02.206 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_ni25_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:27:02.206 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([user_pr26_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.206 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw27_5_0_] : [VARCHAR]) - [{bcrypt}$2a$10$RTc1xLO2BXH72/QzpiMhouv1SCT9rqBgKwQztPI/dh8ENw6A/NJcO]
+2024-09-23_13:27:02.206 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw28_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:27:02.206 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([using_o29_5_0_] : [BOOLEAN]) - [true]
+2024-09-23_13:27:02.253 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [VARCHAR] - [admin]
+2024-09-23_13:27:02.256 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created2_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:27:02.256 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created_3_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:27:02.257 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified4_5_0_] : [TIMESTAMP]) - [2024-09-20T20:28:42.483]
+2024-09-23_13:27:02.257 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified5_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:27:02.258 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([day_of_b6_5_0_] : [SMALLINT]) - [11]
+2024-09-23_13:27:02.258 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([month_of7_5_0_] : [SMALLINT]) - [5]
+2024-09-23_13:27:02.258 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([year_of_8_5_0_] : [INTEGER]) - [1982]
+2024-09-23_13:27:02.258 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted9_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:27:02.258 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted10_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.258 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([gender11_5_0_] : [VARCHAR]) - [Male]
+2024-09-23_13:27:02.259 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([is_fore12_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:27:02.259 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked13_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:27:02.259 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked_14_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.259 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail15_5_0_] : [VARCHAR]) - [freecji@google.com]
+2024-09-23_13:27:02.259 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail_ve16_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:27:02.259 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mobile_17_5_0_] : [VARCHAR]) - [010-6415-4694]
+2024-09-23_13:27:02.259 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([otp_sec18_5_0_] : [VARCHAR]) - [itzf5x4wyasqxcwnmiyktz6qlfbpinpa]
+2024-09-23_13:27:02.260 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([otp_sec19_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.260 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in20_5_0_] : [INTEGER]) - [17]
+2024-09-23_13:27:02.260 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in21_5_0_] : [TIMESTAMP]) - [2024-09-20T20:09:18.363]
+2024-09-23_13:27:02.260 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up22_5_0_] : [VARCHAR]) - [127.0.0.1]
+2024-09-23_13:27:02.260 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up23_5_0_] : [BIGINT]) - [2130706433]
+2024-09-23_13:27:02.261 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_na24_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:27:02.261 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_ni25_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:27:02.261 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([user_pr26_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:27:02.261 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw27_5_0_] : [VARCHAR]) - [{bcrypt}$2a$10$RTc1xLO2BXH72/QzpiMhouv1SCT9rqBgKwQztPI/dh8ENw6A/NJcO]
+2024-09-23_13:27:02.262 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw28_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:27:02.262 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([using_o29_5_0_] : [BOOLEAN]) - [true]
+2024-09-23_13:27:02.380 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [TIMESTAMP] - [2024-09-23T13:27:02.344488400]
+2024-09-23_13:27:02.381 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [2] as [VARCHAR] - [system]
+2024-09-23_13:27:02.383 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [3] as [SMALLINT] - [11]
+2024-09-23_13:27:02.384 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [4] as [SMALLINT] - [5]
+2024-09-23_13:27:02.386 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [5] as [INTEGER] - [1982]
+2024-09-23_13:27:02.386 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [6] as [TIMESTAMP] - [null]
+2024-09-23_13:27:02.387 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [7] as [VARCHAR] - [null]
+2024-09-23_13:27:02.387 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [8] as [VARCHAR] - [Male]
+2024-09-23_13:27:02.388 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [9] as [BOOLEAN] - [false]
+2024-09-23_13:27:02.389 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [10] as [TIMESTAMP] - [null]
+2024-09-23_13:27:02.389 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [11] as [VARCHAR] - [null]
+2024-09-23_13:27:02.389 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [12] as [VARCHAR] - [freecji@google.com]
+2024-09-23_13:27:02.389 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [13] as [TIMESTAMP] - [2024-09-20T00:00]
+2024-09-23_13:27:02.389 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [14] as [VARCHAR] - [010-6415-4694]
+2024-09-23_13:27:02.390 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [15] as [VARCHAR] - [itzf5x4wyasqxcwnmiyktz6qlfbpinpa]
+2024-09-23_13:27:02.390 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [16] as [VARCHAR] - [null]
+2024-09-23_13:27:02.390 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [17] as [INTEGER] - [18]
+2024-09-23_13:27:02.390 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [18] as [TIMESTAMP] - [2024-09-20T20:09:18.363]
+2024-09-23_13:27:02.390 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [19] as [VARCHAR] - [127.0.0.1]
+2024-09-23_13:27:02.392 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [20] as [BIGINT] - [2130706433]
+2024-09-23_13:27:02.393 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [21] as [NVARCHAR] - [admin]
+2024-09-23_13:27:02.393 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [22] as [NVARCHAR] - [admin]
+2024-09-23_13:27:02.394 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [23] as [VARCHAR] - [null]
+2024-09-23_13:27:02.394 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [24] as [VARCHAR] - [{bcrypt}$2a$10$RTc1xLO2BXH72/QzpiMhouv1SCT9rqBgKwQztPI/dh8ENw6A/NJcO]
+2024-09-23_13:27:02.394 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [25] as [BOOLEAN] - [false]
+2024-09-23_13:27:02.394 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [26] as [BOOLEAN] - [true]
+2024-09-23_13:27:02.394 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [27] as [VARCHAR] - [admin]
+2024-09-23_13:27:02.465 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [TIMESTAMP] - [2024-09-23T13:27:02.453539200]
+2024-09-23_13:27:02.466 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [2] as [VARCHAR] - [system]
+2024-09-23_13:27:02.466 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [3] as [TIMESTAMP] - [2024-09-23T13:27:02.453539200]
+2024-09-23_13:27:02.466 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [4] as [VARCHAR] - [system]
+2024-09-23_13:27:02.466 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [5] as [VARCHAR] - [platform-service-client]
+2024-09-23_13:27:02.466 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [6] as [VARCHAR] - [authorization_code]
+2024-09-23_13:27:02.466 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [7] as [BOOLEAN] - [false]
+2024-09-23_13:27:02.466 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [8] as [VARCHAR] - [로그인 실패 한도 초과로 계정이 잠겼습니다.]
+2024-09-23_13:27:02.467 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [9] as [VARCHAR] - [127.0.0.1]
+2024-09-23_13:27:02.467 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [10] as [BIGINT] - [2130706433]
+2024-09-23_13:27:02.467 TRACE 32676 --- [http-nio-9000-exec-10] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [11] as [VARCHAR] - [admin]
+2024-09-23_13:28:06.904 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [VARCHAR] - [admin]
+2024-09-23_13:28:06.906 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created2_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:28:06.907 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created_3_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:28:06.907 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified4_5_0_] : [TIMESTAMP]) - [2024-09-23T13:27:02.343]
+2024-09-23_13:28:06.907 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified5_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:28:06.907 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([day_of_b6_5_0_] : [SMALLINT]) - [11]
+2024-09-23_13:28:06.907 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([month_of7_5_0_] : [SMALLINT]) - [5]
+2024-09-23_13:28:06.907 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([year_of_8_5_0_] : [INTEGER]) - [1982]
+2024-09-23_13:28:06.907 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted9_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:28:06.907 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted10_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:28:06.908 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([gender11_5_0_] : [VARCHAR]) - [Male]
+2024-09-23_13:28:06.908 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([is_fore12_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:28:06.908 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked13_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:28:06.908 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked_14_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:28:06.908 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail15_5_0_] : [VARCHAR]) - [freecji@google.com]
+2024-09-23_13:28:06.909 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail_ve16_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:28:06.909 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mobile_17_5_0_] : [VARCHAR]) - [010-6415-4694]
+2024-09-23_13:28:06.909 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([otp_sec18_5_0_] : [VARCHAR]) - [itzf5x4wyasqxcwnmiyktz6qlfbpinpa]
+2024-09-23_13:28:06.909 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([otp_sec19_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:28:06.909 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in20_5_0_] : [INTEGER]) - [0]
+2024-09-23_13:28:06.909 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in21_5_0_] : [TIMESTAMP]) - [2024-09-20T20:09:18.363]
+2024-09-23_13:28:06.909 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up22_5_0_] : [VARCHAR]) - [127.0.0.1]
+2024-09-23_13:28:06.909 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up23_5_0_] : [BIGINT]) - [2130706433]
+2024-09-23_13:28:06.910 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_na24_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:28:06.910 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_ni25_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:28:06.910 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([user_pr26_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:28:06.910 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw27_5_0_] : [VARCHAR]) - [{bcrypt}$2a$10$RTc1xLO2BXH72/QzpiMhouv1SCT9rqBgKwQztPI/dh8ENw6A/NJcO]
+2024-09-23_13:28:06.910 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw28_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:28:06.910 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([using_o29_5_0_] : [BOOLEAN]) - [true]
+2024-09-23_13:30:11.661  WARN 32676 --- [DomainHikariCP housekeeper] [com.zaxxer.hikari.pool.HikariPool:788] : DomainHikariCP - Thread starvation or clock leap detected (housekeeper delta=2m13s480ms993µs).
+2024-09-23_13:30:11.661  WARN 32676 --- [AuthHikariCP housekeeper] [com.zaxxer.hikari.pool.HikariPool:788] : AuthHikariCP - Thread starvation or clock leap detected (housekeeper delta=2m9s856ms671µs100ns).
+2024-09-23_13:30:11.676 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [VARCHAR] - [admin]
+2024-09-23_13:30:11.701 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created2_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:30:11.705 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created_3_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:30:11.710 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified4_5_0_] : [TIMESTAMP]) - [2024-09-23T13:27:02.343]
+2024-09-23_13:30:11.719 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified5_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:30:11.720 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([day_of_b6_5_0_] : [SMALLINT]) - [11]
+2024-09-23_13:30:11.720 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([month_of7_5_0_] : [SMALLINT]) - [5]
+2024-09-23_13:30:11.721 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([year_of_8_5_0_] : [INTEGER]) - [1982]
+2024-09-23_13:30:11.721 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted9_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:30:11.721 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted10_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:30:11.721 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([gender11_5_0_] : [VARCHAR]) - [Male]
+2024-09-23_13:30:11.721 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([is_fore12_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:30:11.721 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked13_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:30:11.722 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked_14_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:30:11.722 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail15_5_0_] : [VARCHAR]) - [freecji@google.com]
+2024-09-23_13:30:11.722 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail_ve16_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:30:11.722 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mobile_17_5_0_] : [VARCHAR]) - [010-6415-4694]
+2024-09-23_13:30:11.722 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([otp_sec18_5_0_] : [VARCHAR]) - [itzf5x4wyasqxcwnmiyktz6qlfbpinpa]
+2024-09-23_13:30:11.723 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([otp_sec19_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:30:11.723 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in20_5_0_] : [INTEGER]) - [0]
+2024-09-23_13:30:11.723 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in21_5_0_] : [TIMESTAMP]) - [2024-09-20T20:09:18.363]
+2024-09-23_13:30:11.723 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up22_5_0_] : [VARCHAR]) - [127.0.0.1]
+2024-09-23_13:30:11.723 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up23_5_0_] : [BIGINT]) - [2130706433]
+2024-09-23_13:30:11.723 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_na24_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:30:11.724 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_ni25_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:30:11.724 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([user_pr26_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:30:11.724 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw27_5_0_] : [VARCHAR]) - [{bcrypt}$2a$10$RTc1xLO2BXH72/QzpiMhouv1SCT9rqBgKwQztPI/dh8ENw6A/NJcO]
+2024-09-23_13:30:11.724 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw28_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:30:11.753 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([using_o29_5_0_] : [BOOLEAN]) - [true]
+2024-09-23_13:30:11.794 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [VARCHAR] - [admin]
+2024-09-23_13:30:11.797 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created2_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:30:11.798 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created_3_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:30:11.798 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified4_5_0_] : [TIMESTAMP]) - [2024-09-23T13:27:02.343]
+2024-09-23_13:30:11.798 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified5_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:30:11.798 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([day_of_b6_5_0_] : [SMALLINT]) - [11]
+2024-09-23_13:30:11.799 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([month_of7_5_0_] : [SMALLINT]) - [5]
+2024-09-23_13:30:11.799 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([year_of_8_5_0_] : [INTEGER]) - [1982]
+2024-09-23_13:30:11.799 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted9_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:30:11.799 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted10_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:30:11.799 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([gender11_5_0_] : [VARCHAR]) - [Male]
+2024-09-23_13:30:11.799 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([is_fore12_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:30:11.800 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked13_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:30:11.800 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked_14_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:30:11.800 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail15_5_0_] : [VARCHAR]) - [freecji@google.com]
+2024-09-23_13:30:11.800 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail_ve16_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:30:11.800 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mobile_17_5_0_] : [VARCHAR]) - [010-6415-4694]
+2024-09-23_13:30:11.800 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([otp_sec18_5_0_] : [VARCHAR]) - [itzf5x4wyasqxcwnmiyktz6qlfbpinpa]
+2024-09-23_13:30:11.800 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([otp_sec19_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:30:11.800 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in20_5_0_] : [INTEGER]) - [0]
+2024-09-23_13:30:11.801 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in21_5_0_] : [TIMESTAMP]) - [2024-09-20T20:09:18.363]
+2024-09-23_13:30:11.801 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up22_5_0_] : [VARCHAR]) - [127.0.0.1]
+2024-09-23_13:30:11.801 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up23_5_0_] : [BIGINT]) - [2130706433]
+2024-09-23_13:30:11.801 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_na24_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:30:11.801 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_ni25_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:30:11.802 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([user_pr26_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:30:11.802 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw27_5_0_] : [VARCHAR]) - [{bcrypt}$2a$10$RTc1xLO2BXH72/QzpiMhouv1SCT9rqBgKwQztPI/dh8ENw6A/NJcO]
+2024-09-23_13:30:11.802 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw28_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:30:11.802 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([using_o29_5_0_] : [BOOLEAN]) - [true]
+2024-09-23_13:30:11.804 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [TIMESTAMP] - [2024-09-23T13:30:11.804024900]
+2024-09-23_13:30:11.805 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [2] as [VARCHAR] - [system]
+2024-09-23_13:30:11.806 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [3] as [SMALLINT] - [11]
+2024-09-23_13:30:11.806 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [4] as [SMALLINT] - [5]
+2024-09-23_13:30:11.806 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [5] as [INTEGER] - [1982]
+2024-09-23_13:30:11.806 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [6] as [TIMESTAMP] - [null]
+2024-09-23_13:30:11.806 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [7] as [VARCHAR] - [null]
+2024-09-23_13:30:11.806 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [8] as [VARCHAR] - [Male]
+2024-09-23_13:30:11.806 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [9] as [BOOLEAN] - [false]
+2024-09-23_13:30:11.806 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [10] as [TIMESTAMP] - [null]
+2024-09-23_13:30:11.806 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [11] as [VARCHAR] - [null]
+2024-09-23_13:30:11.807 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [12] as [VARCHAR] - [freecji@google.com]
+2024-09-23_13:30:11.807 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [13] as [TIMESTAMP] - [2024-09-20T00:00]
+2024-09-23_13:30:11.807 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [14] as [VARCHAR] - [010-6415-4694]
+2024-09-23_13:30:11.807 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [15] as [VARCHAR] - [itzf5x4wyasqxcwnmiyktz6qlfbpinpa]
+2024-09-23_13:30:11.807 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [16] as [VARCHAR] - [null]
+2024-09-23_13:30:11.807 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [17] as [INTEGER] - [1]
+2024-09-23_13:30:11.807 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [18] as [TIMESTAMP] - [2024-09-20T20:09:18.363]
+2024-09-23_13:30:11.812 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [19] as [VARCHAR] - [127.0.0.1]
+2024-09-23_13:30:11.813 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [20] as [BIGINT] - [2130706433]
+2024-09-23_13:30:11.813 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [21] as [NVARCHAR] - [admin]
+2024-09-23_13:30:11.813 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [22] as [NVARCHAR] - [admin]
+2024-09-23_13:30:11.813 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:52] : binding parameter [23] as [VARCHAR] - [null]
+2024-09-23_13:30:11.813 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [24] as [VARCHAR] - [{bcrypt}$2a$10$RTc1xLO2BXH72/QzpiMhouv1SCT9rqBgKwQztPI/dh8ENw6A/NJcO]
+2024-09-23_13:30:11.813 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [25] as [BOOLEAN] - [false]
+2024-09-23_13:30:11.813 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [26] as [BOOLEAN] - [true]
+2024-09-23_13:30:11.813 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [27] as [VARCHAR] - [admin]
+2024-09-23_13:30:11.867  INFO 32676 --- [SpringApplicationShutdownHook] [org.springframework.boot.web.embedded.tomcat.GracefulShutdown:53] : Commencing graceful shutdown. Waiting for active requests to complete
+2024-09-23_13:30:11.868 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [TIMESTAMP] - [2024-09-23T13:30:11.867144400]
+2024-09-23_13:30:11.868 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [2] as [VARCHAR] - [system]
+2024-09-23_13:30:11.868 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [3] as [TIMESTAMP] - [2024-09-23T13:30:11.867144400]
+2024-09-23_13:30:11.868 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [4] as [VARCHAR] - [system]
+2024-09-23_13:30:11.868 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [5] as [VARCHAR] - [platform-service-client]
+2024-09-23_13:30:11.868 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [6] as [VARCHAR] - [authorization_code]
+2024-09-23_13:30:11.868 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [7] as [BOOLEAN] - [false]
+2024-09-23_13:30:11.869 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [8] as [VARCHAR] - [자격 증명에 실패하였습니다. (유효하지 않은 scope)]
+2024-09-23_13:30:11.869 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [9] as [VARCHAR] - [127.0.0.1]
+2024-09-23_13:30:11.869 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [10] as [BIGINT] - [2130706433]
+2024-09-23_13:30:11.869 TRACE 32676 --- [http-nio-9000-exec-6] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [11] as [VARCHAR] - [admin]
+2024-09-23_13:30:11.898 ERROR 32676 --- [http-nio-9000-exec-6] [org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter:236] : An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: 자격 증명에 실패하였습니다. (유효하지 않은 scope)
+	at com.monolux.authorization.oauth2.AuthenticationProvider.lambda$checkAuthorizationCodeGrantClientInfo$0(AuthenticationProvider.java:128) ~[main/:?]
+	at java.util.Optional.ifPresent(Optional.java:178) ~[?:?]
+	at com.monolux.authorization.oauth2.AuthenticationProvider.checkAuthorizationCodeGrantClientInfo(AuthenticationProvider.java:95) ~[main/:?]
+	at com.monolux.authorization.oauth2.AuthenticationProvider.additionalAuthenticationChecks(AuthenticationProvider.java:64) ~[main/:?]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:147) ~[spring-security-core-5.6.9.jar:5.6.9]
+	at com.monolux.authorization.oauth2.AuthenticationProvider.authenticate(AuthenticationProvider.java:58) ~[main/:?]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.6.9.jar:5.6.9]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201) ~[spring-security-core-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.6.9.jar:5.6.9]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.14.jar:2.6.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: org.springframework.security.oauth2.common.exceptions.InvalidScopeException: 자격 증명에 실패하였습니다. (유효하지 않은 scope)
+	... 66 more
+2024-09-23_13:30:12.737  INFO 32676 --- [tomcat-shutdown] [org.springframework.boot.web.embedded.tomcat.GracefulShutdown:78] : Graceful shutdown complete
+2024-09-23_13:30:12.746  INFO 32676 --- [SpringApplicationShutdownHook] [org.springframework.boot.web.embedded.tomcat.GracefulShutdown:53] : Commencing graceful shutdown. Waiting for active requests to complete
+2024-09-23_13:30:13.557  INFO 32676 --- [tomcat-shutdown] [org.springframework.boot.web.embedded.tomcat.GracefulShutdown:78] : Graceful shutdown complete
+2024-09-23_13:30:13.578  INFO 32676 --- [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource:350] : AuthHikariCP - Shutdown initiated...
+2024-09-23_13:30:13.614  INFO 32676 --- [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource:352] : AuthHikariCP - Shutdown completed.
+2024-09-23_13:30:13.615  INFO 32676 --- [SpringApplicationShutdownHook] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] : Closing JPA EntityManagerFactory for persistence unit 'dataSourceJpa'
+2024-09-23_13:30:13.616  INFO 32676 --- [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource:350] : DomainHikariCP - Shutdown initiated...
+2024-09-23_13:30:13.650  INFO 32676 --- [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource:352] : DomainHikariCP - Shutdown completed.
+2024-09-23_13:33:26.232  INFO 4000 --- [restartedMain] [org.springframework.boot.SpringApplication:62] : 
+
+      ___           ___           ___           ___           ___       ___           ___
+     /\__\         /\  \         /\__\         /\  \         /\__\     /\__\         |\__\
+    /::|  |       /::\  \       /::|  |       /::\  \       /:/  /    /:/  /         |:|  |
+   /:|:|  |      /:/\:\  \     /:|:|  |      /:/\:\  \     /:/  /    /:/  /          |:|  |
+  /:/|:|__|__   /:/  \:\  \   /:/|:|  |__   /:/  \:\  \   /:/  /    /:/  /  ___      |:|__|__
+ /:/ |::::\__\ /:/__/ \:\__\ /:/ |:| /\__\ /:/__/ \:\__\ /:/__/    /:/__/  /\__\ ____/::::\__\
+ \/__/~~/:/  / \:\  \ /:/  / \/__|:|/:/  / \:\  \ /:/  / \:\  \    \:\  \ /:/  / \::::/~~/~
+       /:/  /   \:\  /:/  /      |:/:/  /   \:\  /:/  /   \:\  \    \:\  /:/  /   ~~|:|~~|
+      /:/  /     \:\/:/  /       |::/  /     \:\/:/  /     \:\  \    \:\/:/  /      |:|  |
+     /:/  /       \::/  /        /:/  /       \::/  /       \:\__\    \::/  /       |:|  |
+     \/__/         \/__/         \/__/         \/__/         \/__/     \/__/         \|__|
+::   - Powered by Spring Boot 2.6.14 ::
+
+2024-09-23_13:33:26.238  INFO 4000 --- [background-preinit] [org.hibernate.validator.internal.util.Version:21] : HV000001: Hibernate Validator 6.2.5.Final
+2024-09-23_13:33:26.349  INFO 4000 --- [restartedMain] [com.monolux.authorization.AuthorizationServerApplication:55] : Starting AuthorizationServerApplication using Java 17.0.5 on JICHO with PID 4000 (C:\Development\Practice\PlatformService\com.monolux.authorization\build\classes\java\main started by JeongIk in C:\Development\Practice\PlatformService)
+2024-09-23_13:33:26.353  INFO 4000 --- [restartedMain] [com.monolux.authorization.AuthorizationServerApplication:651] : The following 10 profiles are active: "common", "domain", "encryption", "utils", "local", "authorization.local", "common.local", "domain.local", "encryption.local", "utils.local"
+2024-09-23_13:33:26.424  INFO 4000 --- [restartedMain] [org.springframework.boot.devtools.restart.ChangeableUrls:255] : The Class-Path manifest attribute in C:\Users\JeongIk\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.2\5528bc882ea499a09d720b42af11785c4fc6be2a\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/txw2-2.3.2.jar,file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/istack-commons-runtime-3.0.8.jar,file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/stax-ex-1.8.1.jar,file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/FastInfoset-1.2.16.jar,file:/C:/Users/JeongIk/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/jakarta.activation-api-1.2.1.jar
+2024-09-23_13:33:26.425  INFO 4000 --- [restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-23_13:33:26.425  INFO 4000 --- [restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-23_13:33:27.863  INFO 4000 --- [restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-23_13:33:28.004  INFO 4000 --- [restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] : Finished Spring Data repository scanning in 129 ms. Found 6 JPA repository interfaces.
+2024-09-23_13:33:29.459  INFO 4000 --- [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] : Tomcat initialized with port(s): 9000 (http)
+2024-09-23_13:33:29.473  INFO 4000 --- [restartedMain] [org.apache.coyote.http11.Http11NioProtocol:173] : Initializing ProtocolHandler ["http-nio-9000"]
+2024-09-23_13:33:29.474  INFO 4000 --- [restartedMain] [org.apache.catalina.core.StandardService:173] : Starting service [Tomcat]
+2024-09-23_13:33:29.474  INFO 4000 --- [restartedMain] [org.apache.catalina.core.StandardEngine:173] : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-09-23_13:33:29.592  INFO 4000 --- [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] : Initializing Spring embedded WebApplicationContext
+2024-09-23_13:33:29.592  INFO 4000 --- [restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] : Root WebApplicationContext: initialization completed in 3166 ms
+2024-09-23_13:33:29.947  INFO 4000 --- [restartedMain] [com.zaxxer.hikari.HikariDataSource:80] : DomainHikariCP - Starting...
+2024-09-23_13:33:30.248  INFO 4000 --- [restartedMain] [com.zaxxer.hikari.HikariDataSource:82] : DomainHikariCP - Start completed.
+2024-09-23_13:33:30.345  INFO 4000 --- [restartedMain] [org.hibernate.jpa.internal.util.LogHelper:31] : HHH000204: Processing PersistenceUnitInfo [name: dataSourceJpa]
+2024-09-23_13:33:30.504  INFO 4000 --- [restartedMain] [org.hibernate.Version:44] : HHH000412: Hibernate ORM core version 5.6.14.Final
+2024-09-23_13:33:30.913  INFO 4000 --- [restartedMain] [org.hibernate.annotations.common.Version:56] : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-09-23_13:33:31.255  INFO 4000 --- [restartedMain] [org.hibernate.dialect.Dialect:175] : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-09-23_13:33:33.006  INFO 4000 --- [restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-09-23_13:33:33.023  INFO 4000 --- [restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] : Initialized JPA EntityManagerFactory for persistence unit 'dataSourceJpa'
+2024-09-23_13:33:33.707  INFO 4000 --- [restartedMain] [com.zaxxer.hikari.HikariDataSource:80] : AuthHikariCP - Starting...
+2024-09-23_13:33:33.731  INFO 4000 --- [restartedMain] [com.zaxxer.hikari.HikariDataSource:82] : AuthHikariCP - Start completed.
+2024-09-23_13:33:35.252  INFO 4000 --- [restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain:55] : Will secure Or [Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7cf86f4b, org.springframework.security.web.context.SecurityContextPersistenceFilter@775f459e, org.springframework.security.web.header.HeaderWriterFilter@32eef6f5, org.springframework.security.web.authentication.logout.LogoutFilter@64470576, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@5c8d8ff3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4f96bd94, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7372d044, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@193cc782, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e5c92a4, org.springframework.security.web.session.SessionManagementFilter@3c5d0962, org.springframework.security.web.access.ExceptionTranslationFilter@360cf0f9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@75458a4]
+2024-09-23_13:33:35.273  INFO 4000 --- [restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain:55] : Will secure Or [Ant [pattern='/api/v1/secured/**']] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a8d2bb0, org.springframework.security.web.context.SecurityContextPersistenceFilter@2cb7185, org.springframework.security.web.header.HeaderWriterFilter@73bc6ec, org.springframework.security.web.authentication.logout.LogoutFilter@22e31458, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@7f9a571b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ac1a2b9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@131401ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7404df9, org.springframework.security.web.session.SessionManagementFilter@29f83f25, org.springframework.security.web.access.ExceptionTranslationFilter@21cd31f4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@71d20a0a]
+2024-09-23_13:33:35.279  INFO 4000 --- [restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain:55] : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78e84173, org.springframework.security.web.context.SecurityContextPersistenceFilter@47692a3, org.springframework.security.web.header.HeaderWriterFilter@701c94b, org.springframework.security.web.authentication.logout.LogoutFilter@6602caf6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4a53e5ab, com.monolux.authorization.filters.PostUsernamePasswordAuthenticationFilter@7ac8eb60, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@60858711, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67926599, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ed0a3b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f514b0d, org.springframework.security.web.session.SessionManagementFilter@65cbbe50, org.springframework.security.web.access.ExceptionTranslationFilter@6d81c0d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@14707bd8]
+2024-09-23_13:33:35.934  INFO 4000 --- [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:59] : LiveReload server is running on port 35729
+2024-09-23_13:33:35.966  INFO 4000 --- [restartedMain] [org.apache.coyote.http11.Http11NioProtocol:173] : Starting ProtocolHandler ["http-nio-9000"]
+2024-09-23_13:33:35.992  INFO 4000 --- [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] : Tomcat started on port(s): 9000 (http) with context path ''
+2024-09-23_13:33:36.135  INFO 4000 --- [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] : Tomcat initialized with port(s): 9001 (http)
+2024-09-23_13:33:36.136  INFO 4000 --- [restartedMain] [org.apache.coyote.http11.Http11NioProtocol:173] : Initializing ProtocolHandler ["http-nio-9001"]
+2024-09-23_13:33:36.137  INFO 4000 --- [restartedMain] [org.apache.catalina.core.StandardService:173] : Starting service [Tomcat]
+2024-09-23_13:33:36.137  INFO 4000 --- [restartedMain] [org.apache.catalina.core.StandardEngine:173] : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-09-23_13:33:36.173  INFO 4000 --- [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/]:173] : Initializing Spring embedded WebApplicationContext
+2024-09-23_13:33:36.173  INFO 4000 --- [restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] : Root WebApplicationContext: initialization completed in 173 ms
+2024-09-23_13:33:36.194  INFO 4000 --- [restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:58] : Exposing 4 endpoint(s) beneath base path '/monolux/actuator'
+2024-09-23_13:33:36.248  INFO 4000 --- [restartedMain] [org.apache.coyote.http11.Http11NioProtocol:173] : Starting ProtocolHandler ["http-nio-9001"]
+2024-09-23_13:33:36.253  INFO 4000 --- [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] : Tomcat started on port(s): 9001 (http) with context path ''
+2024-09-23_13:33:36.274  INFO 4000 --- [restartedMain] [com.monolux.authorization.AuthorizationServerApplication:61] : Started AuthorizationServerApplication in 10.891 seconds (JVM running for 13.498)
+2024-09-23_13:33:47.456  INFO 4000 --- [http-nio-9000-exec-3] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-23_13:33:47.456  INFO 4000 --- [http-nio-9000-exec-3] [org.springframework.web.servlet.DispatcherServlet:525] : Initializing Servlet 'dispatcherServlet'
+2024-09-23_13:33:47.459  INFO 4000 --- [http-nio-9000-exec-3] [org.springframework.web.servlet.DispatcherServlet:547] : Completed initialization in 2 ms
+2024-09-23_13:33:47.627 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicBinder:64] : binding parameter [1] as [VARCHAR] - [admin]
+2024-09-23_13:33:47.648 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created2_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:33:47.648 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([created_3_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:33:47.648 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified4_5_0_] : [TIMESTAMP]) - [2024-09-23T13:30:11.803]
+2024-09-23_13:33:47.648 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([modified5_5_0_] : [VARCHAR]) - [system]
+2024-09-23_13:33:47.649 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([day_of_b6_5_0_] : [SMALLINT]) - [11]
+2024-09-23_13:33:47.649 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([month_of7_5_0_] : [SMALLINT]) - [5]
+2024-09-23_13:33:47.650 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([year_of_8_5_0_] : [INTEGER]) - [1982]
+2024-09-23_13:33:47.651 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted9_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:33:47.651 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([deleted10_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:33:47.651 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([gender11_5_0_] : [VARCHAR]) - [Male]
+2024-09-23_13:33:47.652 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([is_fore12_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:33:47.652 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked13_5_0_] : [TIMESTAMP]) - [null]
+2024-09-23_13:33:47.653 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([locked_14_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:33:47.653 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail15_5_0_] : [VARCHAR]) - [freecji@google.com]
+2024-09-23_13:33:47.653 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mail_ve16_5_0_] : [TIMESTAMP]) - [2024-09-20T00:00]
+2024-09-23_13:33:47.654 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([mobile_17_5_0_] : [VARCHAR]) - [010-6415-4694]
+2024-09-23_13:33:47.654 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([otp_sec18_5_0_] : [VARCHAR]) - [itzf5x4wyasqxcwnmiyktz6qlfbpinpa]
+2024-09-23_13:33:47.654 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([otp_sec19_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:33:47.654 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in20_5_0_] : [INTEGER]) - [1]
+2024-09-23_13:33:47.655 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_in21_5_0_] : [TIMESTAMP]) - [2024-09-20T20:09:18.363]
+2024-09-23_13:33:47.655 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up22_5_0_] : [VARCHAR]) - [127.0.0.1]
+2024-09-23_13:33:47.656 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([sign_up23_5_0_] : [BIGINT]) - [2130706433]
+2024-09-23_13:33:47.657 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_na24_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:33:47.657 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_ni25_5_0_] : [NVARCHAR]) - [admin]
+2024-09-23_13:33:47.658 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:50] : extracted value ([user_pr26_5_0_] : [VARCHAR]) - [null]
+2024-09-23_13:33:47.658 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw27_5_0_] : [VARCHAR]) - [{bcrypt}$2a$10$RTc1xLO2BXH72/QzpiMhouv1SCT9rqBgKwQztPI/dh8ENw6A/NJcO]
+2024-09-23_13:33:47.658 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([user_pw28_5_0_] : [BOOLEAN]) - [false]
+2024-09-23_13:33:47.658 TRACE 4000 --- [http-nio-9000-exec-1] [org.hibernate.type.descriptor.sql.BasicExtractor:60] : extracted value ([using_o29_5_0_] : [BOOLEAN]) - [true]
+2024-09-23_13:34:01.997  INFO 4000 --- [SpringApplicationShutdownHook] [org.springframework.boot.web.embedded.tomcat.GracefulShutdown:53] : Commencing graceful shutdown. Waiting for active requests to complete
+2024-09-23_13:34:02.913  INFO 4000 --- [tomcat-shutdown] [org.springframework.boot.web.embedded.tomcat.GracefulShutdown:78] : Graceful shutdown complete
+2024-09-23_13:34:02.923  INFO 4000 --- [SpringApplicationShutdownHook] [org.springframework.boot.web.embedded.tomcat.GracefulShutdown:53] : Commencing graceful shutdown. Waiting for active requests to complete
+2024-09-23_13:34:03.780  INFO 4000 --- [tomcat-shutdown] [org.springframework.boot.web.embedded.tomcat.GracefulShutdown:78] : Graceful shutdown complete
+2024-09-23_13:34:03.797  INFO 4000 --- [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource:350] : AuthHikariCP - Shutdown initiated...
+2024-09-23_13:34:03.837  INFO 4000 --- [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource:352] : AuthHikariCP - Shutdown completed.
+2024-09-23_13:34:03.839  INFO 4000 --- [SpringApplicationShutdownHook] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] : Closing JPA EntityManagerFactory for persistence unit 'dataSourceJpa'
+2024-09-23_13:34:03.840  INFO 4000 --- [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource:350] : DomainHikariCP - Shutdown initiated...
+2024-09-23_13:34:03.878  INFO 4000 --- [SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource:352] : DomainHikariCP - Shutdown completed.

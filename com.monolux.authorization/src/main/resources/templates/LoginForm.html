@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Monolux Sign In</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="/css/signin.css" crossorigin="anonymous"/>
+    <style>
+        @keyframes shake {
+              0% { transform: translateX( 0); }
+             25% { transform: translateX(-5px); }
+             50% { transform: translateX( 5px); }
+             75% { transform: translateX(-5px); }
+            100% { transform: translateX( 0); }
+        }
+    </style>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <input type="hidden" th:value="${param.error}">
+    <form id="form-signin" class="form-signin" method="post" action="/login">
+        <h2 class="form-signin-heading">Monolux</h2>
+        <h2 class="form-signin-heading">Please Sign In</h2>
+        <div id="error" th:style="${param.error} ? 'display: block' : 'display: none'">
+            <div class="alert alert-danger" authorities="alert">
+                <span id="error-message" th:text="${errorMessage}"></span>
+            </div>
+        </div>
+        <div th:style="${param.logout} ? 'display: block' : 'display: none'">
+            <div class="alert alert-success" authorities="alert" th:text="${logoutMessage}">You have been signed out.</div>
+        </div>
+        <p>
+            <label th:for="${usernameElementId}" class="sr-only" th:value="${usernameElementId}"></label>
+            <input type="text" th:id="${usernameElementId}" th:name="${usernameElementId}"
+                   class="form-control" th:placeholder="${usernameElementId}" autofocus style="">
+        </p>
+        <p>
+            <label th:for="${passwordElementId}" class="sr-only" th:value="${passwordElementId}"></label>
+            <input type="password" th:id="${passwordElementId}" th:name="${passwordElementId}"
+                   class="form-control" th:placeholder="${passwordElementId}" style="">
+        </p>
+        <!-- Cloud Flare Turnstile -->
+        <div style="display: block">
+            <div class="cf-turnstile" th:attr="data-sitekey=${cloudFlareTurnstileSiteKey}" data-theme="light"></div>
+            <input id="cf-turnstile-token-validate-url" type="hidden" th:value="${cloudFlareTurnstileTokenValidateUrl}">
+        </div>
+        <!-- Cloud Flare Turnstile -->
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('form-signin').addEventListener('submit', async function (event) {
+                const isKorean = navigator.language.toLowerCase().startsWith('ko');
+
+                const userNameElementId = /*[[${usernameElementId}]]*/ 'username';
+                const passwordElementId = /*[[${passwordElementId}]]*/ 'password';
+
+                const elementUserName = document.getElementById(userNameElementId);
+                const elementPassword = document.getElementById(passwordElementId);
+                const elementError = document.getElementById('error');
+                const elementErrorMessage = document.getElementById('error-message');
+
+                elementError.style.display = 'none';
+                elementErrorMessage.textContent = "";
+
+                const username = elementUserName.value.trim();
+                const password = elementPassword.value.trim();
+
+                if (username !== 'admin' && (username === '' || username.length < 6)) {
+                    elementError.style.display = 'block';
+
+                    if (username === '') {
+                        elementErrorMessage.textContent = isKorean ? "아이디를 입력하세요."
+                            : "Please enter your ID.";
+                    } else {
+                        elementErrorMessage.textContent = isKorean ? "아이디는 최소 6글자 이상이어야 합니다."
+                            : "The ID must be at least 6 characters long.";
+                    }
+
+                    elementUserName.style.animation = "shake 0.4s";
+                    elementUserName.addEventListener('animationend', function () {
+                        elementUserName.style.animation = "";
+                    });
+                    elementUserName.focus();
+                    event.preventDefault();
+                } else if (password === '' || password.length < 8) {
+                    elementError.style.display = 'block';
+
+                    if (password === '') {
+                        elementErrorMessage.textContent = isKorean ? "패스워드를 입력하세요."
+                            : "Please enter your password.";
+                    } else {
+                        elementErrorMessage.textContent = isKorean ? "패스워드는 최소 8글자 이상이어야 합니다."
+                            : "The password must be at least 8 characters long.";
+                    }
+
+                    elementPassword.style.animation = "shake 0.4s";
+                    elementPassword.addEventListener('animationend', function () {
+                        elementPassword.style.animation = "";
+                    });
+                    elementPassword.focus();
+                    event.preventDefault();
+                } else if (document.getElementsByName('cf-turnstile-response').length === 0 ||
+                    document.getElementsByName('cf-turnstile-response')[0].value === '') {
+                    event.preventDefault();
+                } else {
+                    let formData = new FormData();
+                    formData.append('token', document.getElementsByName('cf-turnstile-response')[0].value);
+
+                    const result = await fetch(document.getElementById('cf-turnstile-token-validate-url').value, {
+                        body: formData,
+                        method: 'POST',
+                    }).then(response => response.json());
+
+                    if (!result.success) {
+                        event.preventDefault();
+                    }
+                }
+            });
+        });
+        /*]]>*/
+    </script>
+</div>
+</body>
+</html>

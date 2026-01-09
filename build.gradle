@@ -1,0 +1,69 @@
+buildscript {
+	apply from: 'versions.gradle'
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:${versions.springBootVersion}"
+		classpath "io.spring.gradle:dependency-management-plugin:${versions.springDependencyManagementVersion}"
+	}
+}
+
+def projectVersion() {
+	Properties versionProps = new Properties()
+	versionProps.load(new FileInputStream(file("version.properties")))
+
+	def major = versionProps["MAJOR"].toString()
+	def minor = versionProps["MINOR"].toString()
+	def patch = versionProps["PATCH"].toString()
+	def label = versionProps["LABEL"].toString()
+
+	return "${major}.${minor}.${patch}-${label}"
+}
+
+allprojects {
+	group = 'com.monolux'
+	version = projectVersion()
+}
+
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'io.spring.dependency-management'
+	apply plugin: 'java-library'
+
+	sourceCompatibility = '17'
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		implementation "org.springframework.boot:spring-boot-starter"
+		implementation "org.springframework.boot:spring-boot-starter-jdbc"
+		implementation "org.springframework.boot:spring-boot-starter-web"
+		implementation "org.springframework.boot:spring-boot-starter-log4j2"
+		implementation "org.springframework.boot:spring-boot-starter-validation"
+		developmentOnly "org.springframework.boot:spring-boot-devtools"
+		testImplementation "org.springframework.boot:spring-boot-starter-test"
+		annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
+		compileOnly "org.projectlombok:lombok:${versions.lombokVersion}"
+		annotationProcessor "org.projectlombok:lombok:${versions.lombokVersion}"
+	}
+
+	test {
+		useJUnitPlatform()
+	}
+
+	configurations {
+		compileOnly {
+			extendsFrom annotationProcessor
+		}
+		configureEach {
+			exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
+		}
+	}
+}

@@ -1,0 +1,153 @@
+app:
+  locale:
+    language: "ko"
+    country: "KR"
+
+cloud-flare:
+  turnstile:
+    validate-url: "https://challenges.cloudflare.com/turnstile/v0/siteverify"
+    site-key: "1x00000000000000000000AA"
+    secret-key: "1x0000000000000000000000000000000AA"
+
+otp:issuer-name: "monolux"
+
+server:
+  #tomcat.mbeanregistry.enabled: true #/actuator/metrics/tomcat.threads.config.max, /actuator/metrics/tomcat.threads.busy
+  port: 9000
+  servlet:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+      #force-request: true
+      #force-response: true
+  shutdown: graceful
+  forward-headers-strategy: framework
+
+management:
+  server.port: 9001
+  endpoints:
+    enabled-by-default: false
+    web.base-path: /monolux/actuator
+    jmx.exposure.exclude: "*"
+    web.exposure.include:
+      - info
+      - health
+      - metrics
+      - prometheus
+  endpoint:
+    info.enabled: true
+    health.enabled: true
+    health.show-details: always
+    metrics.enabled: true
+    prometheus.enabled: true
+    shutdown.enabled: false
+  info:
+    defaults.enabled: false
+    build.enabled: true
+    env.enabled: false
+    git.enabled: false
+    git.mode: simple
+    java.enabled: true
+  metrics:
+    tags:
+      application: authorization-server-monitoring
+
+spring:
+  application:
+    name: "monolux-authorization-server"
+  banner:
+    location: banner.txt
+    charset: UTF-8
+  main.banner-mode: log
+  profiles:
+    include:
+      - common
+      - domain
+      - encryption
+      - utils
+    group:
+      local:
+        - authorization.local
+        - common.local
+        - domain.local
+        - encryption.local
+        - utils.local
+      dev:
+        - authorization.dev
+        - common.dev
+        - domain.dev
+        - encryption.dev
+        - utils.dev
+      prod:
+        - authorization.prod
+        - common.prod
+        - domain.prod
+        - encryption.prod
+        - utils.prod
+    active: local
+
+logging.config: classpath:log4j2/log4j2.xml
+
+--- # authorization.local
+spring.config.activate.on-profile: authorization.local
+
+spring.datasource.hikari.authorization:
+  driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jdbc-url: jdbc:sqlserver://localhost:1433;databaseName=security;encrypt=true;trustServerCertificate=true;serverTimezone=Asia/Seoul
+  username: sa
+  password: P@$$w0rd1!
+  poolName: AuthHikariCP
+  maximumPoolSize: 64
+  minimumIdle: 64
+  read-only: false
+  auto-commit: true
+  transaction-isolation: TRANSACTION_READ_COMMITTED
+  connection-test-query: "SELECT 1"
+
+logging.level.org.springframework:
+  web: info
+  security: info
+  oauth2: info
+
+--- # authorization.dev
+spring.config.activate.on-profile: authorization.dev
+
+spring.datasource.hikari.authorization:
+  driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jdbc-url: jdbc:sqlserver://localhost:1433;databaseName=security;encrypt=true;trustServerCertificate=true;serverTimezone=Asia/Seoul
+  username: sa
+  password: P@$$w0rd1!
+  poolName: AuthHikariCP
+  maximumPoolSize: 64
+  minimumIdle: 64
+  read-only: false
+  auto-commit: true
+  transaction-isolation: TRANSACTION_READ_COMMITTED
+  connection-test-query: "SELECT 1"
+
+logging.level.org.springframework:
+  web: info
+  security: info
+  oauth2: info
+
+--- # authorization.prod
+spring.config.activate.on-profile: authorization.prod
+
+spring.datasource.hikari.authorization:
+  driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jdbc-url: jdbc:sqlserver://localhost:1433;databaseName=security;encrypt=true;trustServerCertificate=true;serverTimezone=Asia/Seoul
+  username: sa
+  password: P@$$w0rd1!
+  poolName: AuthHikariCP
+  maximumPoolSize: 64
+  minimumIdle: 64
+  read-only: false
+  auto-commit: true
+  transaction-isolation: TRANSACTION_READ_COMMITTED
+  connection-test-query: "SELECT 1"
+
+logging.level.org.springframework:
+  web: warn
+  security: warn
+  oauth2: warn

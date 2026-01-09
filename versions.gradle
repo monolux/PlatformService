@@ -1,0 +1,12 @@
+ext.versions = [:]
+versions.springBootVersion = "2.6.14"
+versions.springDependencyManagementVersion = "1.1.4"
+versions.springSecurityOauth2Version = "2.3.8.RELEASE"
+versions.jaxbRuntimeVersion = "2.3.2"
+versions.lombokVersion = "1.18.30"
+versions.querydslVersion = "5.0.0"
+versions.swaggerVersion = "3.0.0"
+versions.modelMapperVersion = "3.2.0"
+versions.awsJavaSdkS3Version = "1.12.681"
+versions.totpVersion = "1.0"
+versions.zxingVersion = "3.5.3"

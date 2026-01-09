@@ -1,0 +1,76 @@
+{
+  "properties": [
+    {
+      "name": "app.locale.language",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "app.locale.country",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "cloud-flare.turnstile.validate-url",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "cloud-flare.turnstile.site-key",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "cloud-flare.turnstile.secret-key",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "otp:issuer-name",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization",
+      "type": "com.zaxxer.hikari.HikariConfig"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.driver-class-name",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.jdbc-url",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.username",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.password",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.poolName",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.maximumPoolSize",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.minimumIdle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.read-only",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.auto-commit",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.transaction-isolation",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "spring.datasource.hikari.authorization.connection-test-query",
+      "type": "java.lang.String"
+    }
+  ]
+}
