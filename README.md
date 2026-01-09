@@ -27,7 +27,7 @@
    + API 문서화를 위해 Swagger(OpenAPI)를 적용
      + secured API 와 public API 의 definition 을 분리
 
-3. Domain Module : 도메인 로직을 작성한 모귤
+3. Domain Module : 도메인 로직을 작성한 모듈
    + Spring Data JPA 및 QueryDSL을 활용한 ORM 기반 데이터 접근 계층 구성
 
 4. Encryption : AES, DES 등등의 암호화 처리를 하는 모듈
